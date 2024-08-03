@@ -1,0 +1,44 @@
+/* *resetting clint's css */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.card-img-top {
+	width: 100%;
+	height: 30vh;
+	object-fit: contain;
+	border-radius: 0px !important;
+}
+
+.card-title {
+	overflow: hidden;
+	display: -webkit-box;
+	line-clamp: 1;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.card-text {
+	overflow: hidden;
+	display: -webkit-box;
+	line-clamp: 2;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+input:disabled {
+	background: transparent !important;
+	border: none;
+}
+
+.modal__task--description {
+	text-align: justify;
+}
+
+.modal__task--description::first-letter {
+	font-weight: bold;
+	font-size: 2em;
+	padding-right: 0.2em;
+}

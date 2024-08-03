@@ -1,2 +1,3 @@
-# Landing page project
-This is dimple project uses only __HTML__ and __CSS__ to create simple __landing page__.
+# Project landing page website
+
+This is simple project uses only **HTML** and **CSS** to create simple **landing page website**. The page is **responsive** and uses **vanilla CSS**. Small and easy project that will refresh your basic CSS and HTML.
