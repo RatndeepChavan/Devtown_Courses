@@ -1,0 +1,36 @@
+@use "utils";
+
+.services {
+    width: 70%;
+    margin: 0 auto;
+
+    @include utils.breakpoint("md") {
+        width: 90%;
+    }
+
+    &__cards {
+        display: block;
+        margin-bottom: 3em;
+        gap: 3em;
+
+        @include utils.breakpoint("md") {
+            display: flex;
+        }
+    }
+
+    &__card {
+        margin-top: 2em;
+        padding: 1em;
+    }
+
+    &__card:last-child {
+        margin-top: 2em;
+        padding: 1em;
+    }
+
+    &__card:hover {
+        color: var(--link-hover);
+        background: var(--disabled-color);
+        border-radius: 1.5em;
+    }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- ?Google fonts link -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400..700&family=Hind:wght@300;400;500;600;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- *Title and logo -->
+		<title>CarDealer</title>
+		<link rel="icon" type="image/x-icon" href="./assets/logo/only logo light.JPG" />
+		<link rel="stylesheet" href="./dist/css/index.min.css" />
+		<script src="./dist/js/index.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<nav class="nav">
+				<div class="nav__brand pointer">
+					<div class="nav__logo">
+						<img src="./assets/logo/only logo light.JPG" alt="CarDealer Logo" />
+					</div>
+					<div class="nav__heading">Car Dealer</div>
+				</div>
+				<div class="nav__items">
+					<div class="nav__item pointer">Home</div>
+					<div class="nav__item pointer">Services</div>
+					<div class="nav__item pointer">Top Pick</div>
+					<div class="nav__item pointer">New Cars</div>
+					<div class="nav__item pointer">Brands</div>
+					<div class="nav__item pointer">Contact Us</div>
+				</div>
+				<div class="nav__items--hidden pointer">
+					<div class="nav__item--hidden"></div>
+					<div class="nav__item--hidden"></div>
+					<div class="nav__item--hidden"></div>
+				</div>
+				<div class="nav__items--close pointer">x</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="hero__images">
+					<img
+						src="./assets/images/welcome-hero/hero-light.jpg"
+						alt="car animation"
+						class="hero__image1"
+					/>
+					<img
+						src="./assets/images/welcome-hero/hero-light.jpg"
+						alt="car animation"
+						class="hero__image2"
+					/>
+				</div>
+				<div class="hero__banner">
+					<h1 class="heading1">Get Your Dream Car!</h1>
+				</div>
+			</section>
+
+			<section class="search">
+				<form method="post" class="search__form">
+					<div class="search__inputs">
+						<label for="make" class="search__label">Make : </label>
+						<select
+							placeholder="select car make"
+							name="car_make"
+							id="make"
+							class="search__options"
+						>
+							<option value="" class="search__option">select car make</option>
+							<option value="" class="search__option">make1</option>
+							<option value="" class="search__option">make1</option>
+						</select>
+						<label for="make" class="search__label">Make : </label>
+						<select name="car_make" id="make" class="search__options">
+							<option value="" class="search__option">make1</option>
+							<option value="" class="search__option">make1</option>
+							<option value="" class="search__option">make1</option>
+						</select>
+					</div>
+					<div class="search__button">
+						<button type="" class="button button__primary">Submit</button>
+						<button type="" class="button button__primary">View All</button>
+					</div>
+				</form>
+			</section>
+
+			<section>
+				<h1 class="heading1">New Cars</h1>
+				<div class="carousel">
+					<div class="carousel__container">
+						<div class="carousel__item">
+							<div class="carousel__image">
+								<img src="./assets/images/new-cars-model/ncm1.png" alt="" />
+							</div>
+							<div class="carousal__content">
+								<div class="heading2 services__title">Services</div>
+								<div class="justify-text services__description">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+									illum molestiae sunt totam, tenetur quaerat, perspiciatis
+									accusamus repellat quis ratione, alias veniam fugiat quae
+									tempora dolor est. Nostrum, aut cum!
+								</div>
+							</div>
+						</div>
+						<div class="carousel__item">
+							<div class="carousel__image">
+								<img src="./assets/images/new-cars-model/ncm2.png" alt="" />
+							</div>
+							<div class="carousal__content">
+								<div class="heading2 services__title">Services</div>
+								<div class="justify-text services__description">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+									illum molestiae sunt totam, tenetur quaerat, perspiciatis
+									accusamus repellat quis ratione, alias veniam fugiat quae
+									tempora dolor est. Nostrum, aut cum!
+								</div>
+							</div>
+						</div>
+						<div class="carousel__item">
+							<div class="carousel__image">
+								<img src="./assets/images/new-cars-model/ncm3.png" alt="" />
+							</div>
+							<div class="carousal__content">
+								<div class="heading2 services__title">Services</div>
+								<div class="justify-text services__description">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+									illum molestiae sunt totam, tenetur quaerat, perspiciatis
+									accusamus repellat quis ratione, alias veniam fugiat quae
+									tempora dolor est. Nostrum, aut cum!
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel__buttons">
+						<button class="carousel__prev">‹</button>
+						<button class="carousel__next">›</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<h1 class="heading1">Our Services</h1>
+				<div class="services__cards">
+					<div class="services__card">
+						<div class="heading2 services__title">Services</div>
+						<hr class="divider" />
+						<div class="justify-text services__description">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum
+							molestiae sunt totam, tenetur quaerat, perspiciatis accusamus repellat
+							quis ratione, alias veniam fugiat quae tempora dolor est. Nostrum, aut
+							cum!
+						</div>
+					</div>
+					<div class="services__card">
+						<div class="heading2 services__title">Services</div>
+						<hr class="divider" />
+						<div class="justify-text services__description">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum
+							molestiae sunt totam, tenetur quaerat, perspiciatis accusamus repellat
+							quis ratione, alias veniam fugiat quae tempora dolor est. Nostrum, aut
+							cum!
+						</div>
+					</div>
+					<div class="services__card">
+						<div class="heading2 services__title">Services</div>
+						<hr class="divider" />
+						<div class="justify-text services__description">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum
+							molestiae sunt totam, tenetur quaerat, perspiciatis accusamus repellat
+							quis ratione, alias veniam fugiat quae tempora dolor est. Nostrum, aut
+							cum!
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="pointer">dark mode</footer>
+	</body>
+</html>

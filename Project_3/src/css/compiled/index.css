@@ -1,0 +1,775 @@
+.button {
+  background: var(--background-color);
+  color: var(--nav-link);
+  border: 1px solid var(--nav-link);
+}
+.button__primary {
+  min-width: max(5em, 130px);
+  padding: 0.5em 1em;
+}
+.button__primary:active {
+  min-width: calc(max(5em, 80px) - 5px);
+  padding: 0.4em 0.9em;
+}
+
+.button:hover {
+  color: var(--link-hover);
+  border: 1px solid var(--link-hover);
+}
+
+.button:active {
+  color: var(--logo-heading);
+  border: 1px solid var(--logo-heading);
+  opacity: 0.9;
+  filter: blur(0.8px);
+}
+
+.divider {
+  width: 100%;
+  border-color: var(--disabled-color);
+}
+
+/*
+// *font for description : Oswald
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 700
+// .oswald-<uniquifier > {
+//     font-family: "Oswald", sans-serif;
+//     font-optical-sizing: auto;
+//     font-weight: <weight>;
+//     font-style: normal;
+// }
+
+// *cursive font : Dancing Script
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700
+// .dancing-script-<uniquifier > {
+//     font-family: "Dancing Script", cursive;
+//     font-optical-sizing: auto;
+//     font-weight: <weight>;
+//     font-style: normal;
+// }
+
+// *Special all caps : Bona Nova SC
+
+.bona-nova-sc-regular {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bona-nova-sc-bold {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.bona-nova-sc-regular-italic {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+// *Regular font : Hind
+.hind-light {
+    font-family: "Hind", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.hind-regular {
+    font-family: "Hind", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hind-medium {
+    font-family: "Hind", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.hind-semibold {
+    font-family: "Hind", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hind-bold {
+    font-family: "Hind", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+// *Logo font
+.kanit-thin {
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.kanit-extralight {
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.kanit-light {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.kanit-regular {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kanit-medium {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.kanit-semibold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.kanit-bold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.kanit-extrabold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.kanit-black {
+    font-family: "Kanit", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.kanit-thin-italic {
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.kanit-extralight-italic {
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.kanit-light-italic {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.kanit-regular-italic {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.kanit-medium-italic {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.kanit-semibold-italic {
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.kanit-bold-italic {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.kanit-extrabold-italic {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.kanit-black-italic {
+    font-family: "Kanit", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+*/
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 80vh;
+  margin: auto;
+}
+.carousel__container {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 300%;
+  height: 90%;
+}
+.carousel__item {
+  flex: 0 0 33%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  height: 100%;
+}
+@media (min-width: 48em) {
+  .carousel__item {
+    flex-direction: row;
+    padding: 3em;
+    gap: 3em;
+  }
+}
+.carousel__image {
+  opacity: 0.8;
+  height: 60%;
+  overflow: hidden;
+}
+@media (min-width: 48em) {
+  .carousel__image {
+    min-width: 50%;
+    height: 100%;
+  }
+}
+.carousel__image img {
+  width: 100%;
+  height: 100%;
+}
+.carousel__buttons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  top: 45%;
+  transform: translateY(-50%);
+  justify-content: space-between;
+}
+.carousel__prev, .carousel__next {
+  background: none;
+  color: var(--nav-link);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 5em;
+  opacity: 0.5;
+}
+.carousel__prev:hover, .carousel__next:hover {
+  color: var(--link-hover);
+  font-size: 6em;
+  opacity: 0.8;
+}
+.carousel__prev {
+  left: 0;
+}
+.carousel__next {
+  right: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 100%;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textarea without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.heading1 {
+  width: 100%;
+  font-size: 2.5em;
+  transform: skewX(-15deg);
+  text-align: center;
+  line-height: 1.5em;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+@media (min-width: 48em) {
+  .heading1 {
+    font-size: 3.3em;
+  }
+}
+@media (min-width: 62em) {
+  .heading1 {
+    font-size: 3.8em;
+  }
+}
+
+.heading2 {
+  width: 100%;
+  font-size: 1.5em;
+  text-align: left;
+  line-height: 1.2em;
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+@media (min-width: 48em) {
+  .heading2 {
+    font-size: 2em;
+  }
+}
+@media (min-width: 62em) {
+  .heading2 {
+    font-size: 2.5em;
+  }
+}
+
+.justify-text {
+  line-height: 1.1em;
+  text-align: justify;
+  line-break: strict;
+}
+
+:root {
+  --text-color: #000000;
+  --background-color: #ffffff;
+  --logo-heading: #c06713;
+  --nav-link: #09002b;
+  --link-hover: #575500;
+  --disabled-color: #dfdfdf;
+}
+
+footer {
+  position: fixed;
+  width: 120px;
+  bottom: 1%;
+  right: 3%;
+  padding: 0.3em 0em;
+  text-align: center;
+  font-size: 1.2em;
+  border: 2px solid var(--text-color);
+  opacity: 0.7;
+  background: var(--background-color);
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+header {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  opacity: 0.9;
+}
+header .nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5em;
+}
+@media (min-width: 48em) {
+  header .nav {
+    height: 6em;
+  }
+}
+header .nav__brand {
+  margin-left: 2.2em;
+  color: var(--logo-heading);
+}
+@media (min-width: 48em) {
+  header .nav__brand {
+    margin-left: 3em;
+  }
+}
+header .nav__logo {
+  width: 8em;
+}
+@media (min-width: 48em) {
+  header .nav__logo {
+    width: 10em;
+  }
+}
+header .nav__logo img {
+  width: 100%;
+  height: 100%;
+}
+header .nav__heading {
+  margin-top: -5%;
+  transform: skewX(-20deg);
+  letter-spacing: 0.25em;
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+@media (min-width: 48em) {
+  header .nav__heading {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.2em;
+  }
+}
+header .nav__brand:hover {
+  color: var(--link-hover);
+  opacity: 0.8;
+}
+header .nav__items {
+  display: none;
+  position: absolute;
+  margin-top: 16em;
+  width: 100% !important;
+  background: var(--background-color);
+}
+@media (min-width: 48em) {
+  header .nav__items {
+    display: flex !important;
+    position: relative;
+    margin: initial;
+    width: initial !important;
+    align-items: center;
+    margin-right: 2.2em;
+  }
+}
+header .nav__items--hidden {
+  display: block;
+  min-width: 6vw;
+  margin-right: 2.2em;
+}
+@media (min-width: 48em) {
+  header .nav__items--hidden {
+    display: none !important;
+  }
+}
+header .nav__items--close {
+  display: none;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 3em;
+  margin-right: 0.8em;
+}
+@media (min-width: 48em) {
+  header .nav__items--close {
+    display: none;
+  }
+}
+header .nav__item {
+  color: var(--nav-link);
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  transform: skewX(-10deg);
+  margin-bottom: 0.2em;
+  transition: 0.3s;
+}
+@media (min-width: 48em) {
+  header .nav__item {
+    margin: 0em;
+    margin-right: 1em;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+}
+@media (min-width: 62em) {
+  header .nav__item {
+    margin-right: 1.2em;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.1em;
+  }
+}
+header .nav__item--hidden {
+  border: 2px solid var(--text-color);
+  width: 100%;
+}
+header .nav__item--hidden:nth-child(2) {
+  margin: 0.6em 0em;
+}
+header .nav__item:last-child {
+  padding-bottom: 1em;
+}
+@media (min-width: 48em) {
+  header .nav__item:last-child {
+    padding: 0em;
+  }
+}
+header .nav__item:hover {
+  color: var(--link-hover);
+  font-size: 1.08em;
+}
+
+.hero {
+  position: relative;
+  color: var(--text-color);
+  background: var(--background-color);
+  text-align: center;
+  height: 60vh;
+  z-index: -2;
+}
+.hero__banner {
+  width: 40%;
+  height: 100%;
+  margin: 0;
+  margin-left: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 5;
+}
+@media (min-width: 48em) {
+  .hero__banner {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+.hero__images {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  opacity: 0.7;
+  z-index: -1;
+}
+.hero__image1 {
+  display: none;
+  transform: scaleX(-1);
+  object-fit: contain;
+}
+@media (min-width: 48em) {
+  .hero__image1 {
+    display: block;
+    width: 50%;
+    height: 90%;
+  }
+}
+.hero__image2 {
+  height: 90%;
+  width: 100%;
+  object-fit: contain;
+}
+@media (min-width: 48em) {
+  .hero__image2 {
+    width: 50%;
+  }
+}
+
+.search {
+  background: var(--background-color);
+  color: var(--text-color);
+  width: 90%;
+  margin: 5em auto 3em;
+  z-index: 5;
+  border: 3px solid var(--nav-link);
+  border-radius: 3em;
+}
+.search__form {
+  width: 100%;
+  padding: 3em;
+  font-size: 1.4em;
+}
+@media (min-width: 48em) {
+  .search__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.search__inputs {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 48em) {
+  .search__inputs {
+    width: 60%;
+  }
+}
+@media (min-width: 62em) {
+  .search__inputs {
+    width: 70%;
+  }
+}
+.search__label {
+  margin-bottom: 0.5em;
+}
+.search__options {
+  margin-bottom: 2.2em;
+  padding: 0.5em;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Hind", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.search__options:last-child {
+  margin: 0;
+}
+.search__options:hover {
+  border: 2px solid var(--link-hover);
+}
+.search__options:focus {
+  border: 2px solid var(--logo-heading);
+}
+.search__option {
+  font-size: 1em;
+  color: var(--logo-heading);
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.search__button {
+  text-align: center;
+  margin-top: 2em;
+}
+@media (min-width: 48em) {
+  .search__button {
+    margin: 0;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+  }
+}
+
+.services {
+  width: 70%;
+  margin: 0 auto;
+}
+@media (min-width: 48em) {
+  .services {
+    width: 90%;
+  }
+}
+.services__cards {
+  display: block;
+  margin-bottom: 3em;
+  gap: 3em;
+}
+@media (min-width: 48em) {
+  .services__cards {
+    display: flex;
+  }
+}
+.services__card {
+  margin-top: 2em;
+  padding: 1em;
+}
+.services__card:last-child {
+  margin-top: 2em;
+  padding: 1em;
+}
+.services__card:hover {
+  color: var(--link-hover);
+  background: var(--disabled-color);
+  border-radius: 1.5em;
+}
+/*# sourceMappingURL=index.css.map */

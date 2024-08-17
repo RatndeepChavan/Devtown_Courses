@@ -1,0 +1,137 @@
+@use "utils";
+
+header {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	opacity: 0.9;
+
+	.nav {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 5em;
+
+		@include utils.breakpoint("md") {
+			height: 6em;
+		}
+
+		&__brand {
+			margin-left: 2.2em;
+			color: var(--logo-heading);
+
+			@include utils.breakpoint("md") {
+				margin-left: 3em;
+			}
+		}
+
+		&__logo {
+			width: 8em;
+
+			@include utils.breakpoint("md") {
+				width: 10em;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&__heading {
+			margin-top: -5%;
+			transform: skewX(-20deg);
+			letter-spacing: 0.25em;
+			@include utils.apply-font("kanit-bold-italic");
+
+			@include utils.breakpoint("md") {
+				@include utils.apply-font("kanit-extrabold-italic");
+				font-size: 1.2em;
+			}
+		}
+
+		&__brand:hover {
+			color: var(--link-hover);
+			opacity: 0.8;
+		}
+
+		&__items {
+			display: none;
+			position: absolute;
+			margin-top: 16em;
+			width: 100% !important;
+			background: var(--background-color);
+			@include utils.breakpoint("md") {
+				display: flex !important;
+				position: relative;
+				margin: initial;
+				width: initial !important;
+				align-items: center;
+				margin-right: 2.2em;
+			}
+
+			&--hidden {
+				display: block;
+				min-width: 6vw;
+				margin-right: 2.2em;
+
+				@include utils.breakpoint("md") {
+					display: none !important;
+				}
+			}
+
+			&--close {
+				display: none;
+				@include utils.apply-font("kanit-regular-italic");
+				font-size: 3em;
+				margin-right: 0.8em;
+				@include utils.breakpoint("md") {
+					display: none;
+				}
+			}
+		}
+
+		&__item {
+			color: var(--nav-link);
+			text-align: center;
+			@include utils.apply-font("oswald-medium");
+			letter-spacing: 0.1em;
+			transform: skewX(-10deg);
+			margin-bottom: 0.2em;
+			transition: 0.3s;
+
+			@include utils.breakpoint("md") {
+				margin: 0em;
+				margin-right: 1em;
+				@include utils.apply-font("oswald-semibold");
+			}
+
+			@include utils.breakpoint("lg") {
+				margin-right: 1.2em;
+				@include utils.apply-font("oswald-bold");
+				font-size: 1.1em;
+			}
+
+			&--hidden {
+				border: 2px solid var(--text-color);
+				width: 100%;
+			}
+
+			&--hidden:nth-child(2) {
+				margin: 0.6em 0em;
+			}
+		}
+
+		&__item:last-child {
+			padding-bottom: 1em;
+			@include utils.breakpoint("md") {
+				padding: 0em;
+			}
+		}
+
+		&__item:hover {
+			color: var(--link-hover);
+			font-size: 1.08em;
+		}
+	}
+}

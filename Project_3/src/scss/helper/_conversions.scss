@@ -1,0 +1,8 @@
+@use "sass:math";
+
+$base-font-size: 16;
+
+@function pixelToEm($value) {
+    $emValue: math.div($value, $base-font-size);
+    @return $emValue + "em";
+}

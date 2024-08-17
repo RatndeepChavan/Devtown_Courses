@@ -1,0 +1,15 @@
+@use "utils";
+
+footer {
+    position: fixed;
+    width: 120px;
+    bottom: 1%;
+    right: 3%;
+    padding: 0.3em 0em;
+    text-align: center;
+    font-size: 1.2em;
+    border: 2px solid var(--text-color);
+    opacity: 0.7;
+    background: var(--background-color);
+    @include utils.apply-font("kanit-bold");
+}

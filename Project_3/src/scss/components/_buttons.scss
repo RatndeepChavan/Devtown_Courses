@@ -1,0 +1,27 @@
+.button {
+    background: var(--background-color);
+    color: var(--nav-link);
+    border: 1px solid var(--nav-link);
+
+    &__primary {
+        min-width: max(5em, 130px);
+        padding: 0.5em 1em;
+    }
+
+    &__primary:active {
+        min-width: calc(max(5em, 80px) - 5px);
+        padding: 0.4em 0.9em;
+    }
+}
+
+.button:hover {
+    color: var(--link-hover);
+    border: 1px solid var(--link-hover);
+}
+
+.button:active {
+    color: var(--logo-heading);
+    border: 1px solid var(--logo-heading);
+    opacity: 0.9;
+    filter: blur(0.8px);
+}

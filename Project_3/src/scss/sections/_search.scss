@@ -1,0 +1,81 @@
+@use "utils";
+
+.search {
+    background: var(--background-color);
+    color: var(--text-color);
+    width: 90%;
+    margin: 5em auto 3em;
+    z-index: 5;
+    border: 3px solid var(--nav-link);
+    border-radius: 3em;
+
+    &__form {
+        width: 100%;
+        padding: 3em;
+        font-size: 1.4em;
+
+        @include utils.breakpoint("md") {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+
+        @include utils.breakpoint("md") {
+            width: 60%;
+        }
+
+        @include utils.breakpoint("lg") {
+            width: 70%;
+        }
+    }
+
+    &__label {
+        margin-bottom: 0.5em;
+    }
+
+    &__options {
+        margin-bottom: 2.2em;
+        padding: 0.5em;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        @include utils.apply-font("hind-bold");
+    }
+
+    &__options:last-child {
+        margin: 0;
+    }
+
+    &__options:hover {
+        border: 2px solid var(--link-hover);
+    }
+
+    &__options:focus {
+        border: 2px solid var(--logo-heading);
+    }
+
+    &__option {
+        font-size: 1em;
+        color: var(--logo-heading);
+        @include utils.apply-font("kanit-regular-italic");
+    }
+
+    &__button {
+        text-align: center;
+        margin-top: 2em;
+
+        @include utils.breakpoint("md") {
+            margin: 0;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5em;
+        }
+    }
+}

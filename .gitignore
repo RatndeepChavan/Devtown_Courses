@@ -1,5 +1,12 @@
+# ignoring IDE settings
+.vscode
+
 # ignoring the text file
 *.txt
 
 # ignoring trial files
 try.*
+
+package-lock.json
+
+node_modules

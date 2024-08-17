@@ -1,0 +1,23 @@
+@use "helper";
+
+// 576px    -> Small tablets and large phones in landscape mode.
+// 768px    -> Tablets and small laptops.
+// 992px    -> Laptops and desktops.
+// 1200p    -> Large desktops and high-resolution screens.
+// 1400px   -> Very large desktops and large high-resolution displays.
+
+// ? considering 16px is base font size of browser == 1em
+// ? breakpoint in em = (value in pixel / base font size)
+$breakpoints-up: (
+    "sm": helper.pixelToEm(576),
+    "md": helper.pixelToEm(768),
+    "lg": helper.pixelToEm(992),
+    "xl": helper.pixelToEm(1200),
+    "xxl": helper.pixelToEm(1400)
+);
+
+@mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}

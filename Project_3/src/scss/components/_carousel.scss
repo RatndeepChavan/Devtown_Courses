@@ -1,0 +1,80 @@
+@use "utils";
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+    margin: auto;
+
+    &__container {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        width: 300%;
+        height: 90%;
+    }
+
+    &__item {
+        flex: 0 0 33%;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5em;
+        height: 100%;
+
+        @include utils.breakpoint("md") {
+            flex-direction: row;
+            padding: 3em;
+            gap: 3em;
+        }
+    }
+
+    &__image {
+        opacity: 0.8;
+        height: 60%;
+        overflow: hidden;
+
+        @include utils.breakpoint("md") {
+            min-width: 50%;
+            height: 100%;
+        }
+    }
+
+    &__image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__buttons {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        top: 45%;
+        transform: translateY(-50%);
+        justify-content: space-between;
+    }
+
+    &__prev,
+    &__next {
+        background: none;
+        color: var(--nav-link);
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+        font-size: 5em;
+        opacity: 0.5;
+
+        &:hover {
+            color: var(--link-hover);
+            font-size: 6em;
+            opacity: 0.8;
+        }
+    }
+
+    &__prev {
+        left: 0;
+    }
+
+    &__next {
+        right: 0;
+    }
+}
